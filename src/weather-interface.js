@@ -9,13 +9,14 @@ $().ready(function(){
 
         let city = $("#location").val();
         $("#location").val("");
+        
 
         let apikey = process.env.API_KEY;
 
 
         //VANILLA JS
         let request = new XMLHttpRequest();
-        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apikey}&units=imperial`
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=APIKEY=imperial`
 
         request.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
@@ -29,8 +30,10 @@ $().ready(function(){
 
 
         const getElements = function(response){
-            $('.showHumidity').text(`The humidy in ${city} is ${response.main.humidity}%`);
-            $(".showTemp").text(`The temperature is ${response.main.temp}`);
+            $(".showHumidity").text(`${response.main.humidity}%`);
+            $(".showTemp").text(`${response.main.temp}`);
+            $(".showRain").text(`${response.weather[0].main}`);
+            $("#city").text(`${response.name}`)
         }
 
         //AJAX WRAPPER

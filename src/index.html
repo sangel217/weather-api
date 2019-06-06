@@ -4,28 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webpack Template</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <title>Weather App</title>
 </head>
 <body>
-  <div class="grid-container">
-    <div></div>
-    <div>
-      <h1>Weather</h1>
-      
-        <label for="location">City</label><br>
-        <input type="text" name="location" id="location" required autocomplete="off">
-        <button type="button" id="button">Submit</button>
 
-    </div>
+    <label for="location">City</label><br>
+    <input type="text" name="location" id="location" required autocomplete="off">
+    <button type="button" id="button">Submit</button>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="weather-card one">
+              <div class="top">
+                <div class="wrapper">
+                  <div class="mynav">
+                    <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+                    <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+                  </div>
+                  <h1 class="showRain"></h1>
+                  <h3 id="city"></h3>
+                  <p class="temp">
+                    <span class="showTemp"></span>
+                    <span class="deg">0</span>
+                    <a href="javascript:;"><span class="temp-type">F</span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="wrapper">
+                  <ul class="forecast">
+                    <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
+                    <li class="active">
+                      <span class="date">Today</span>
+                      <span class="lnr lnr-sun condition">
+                        <span class="showTemp"><span class="deg">0</span><span class="temp-type">F</span></span>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="date">Tomorrow</span>
+                      <span class="lnr lnr-cloud condition">
+                        <span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="weather-card rain">
+              <div class="top">
+                <div class="wrapper">
+                  <div class="mynav">
+                    <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+                    <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+                  </div>
+                  <h1 class="heading">Rainy day</h1>
+                  <h3 class="location">Sylhet, Bangladesh</h3>
+                  <p class="temp">
+                    <span class="temp-value">16</span>
+                    <span class="deg">0</span>
+                    <a href="javascript:;"><span class="temp-type">C</span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="wrapper">
+                  <ul class="forecast">
+                    <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
+                    <li class="active">
+                      <span class="date">Yesterday</span>
+                      <span class="lnr lnr-sun condition">
+                        <span class="temp">22<span class="deg">0</span><span class="temp-type">C</span></span>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="date">Tomorrow</span>
+                      <span class="lnr lnr-cloud condition">
+                        <span class="temp">18<span class="deg">0</span><span class="temp-type">C</span></span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        
+    <!-- </div>
     <div class="showTemp">
      
 
     </div>
     <div class="showHumidity">
-     
+      -->
 
 
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
 </body>
 </html>
